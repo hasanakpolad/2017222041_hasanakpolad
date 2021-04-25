@@ -69,6 +69,8 @@
   <ItemGroup>
     <Content Include="css\signIn.css" />
     <Content Include="css\signUp.css" />
+    <Content Include="scripts\signIn.js" />
+    <Content Include="scripts\signUp.js" />
     <Content Include="SignIn.aspx" />
     <Content Include="SignUp.aspx" />
     <Content Include="Web.config" />
