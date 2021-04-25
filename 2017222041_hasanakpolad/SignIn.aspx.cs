@@ -13,5 +13,10 @@ namespace _2017222041_hasanakpolad
         {
 
         }
+
+        protected void btnSubmit_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
