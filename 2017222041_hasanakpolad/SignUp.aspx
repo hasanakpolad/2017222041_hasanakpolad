@@ -22,19 +22,6 @@
             <div class="main-login main-center">
                 <h5>Bilgileri Eksiksiz Doldurunuz.</h5>
                 <form runat="server" class="" method="post" action="#">
-
-                    <div class="form-group">
-                        <label for="name" class="cols-sm-2 control-label">Adınız:</label>
-                        <div class="cols-sm-10">
-                            <div class="input-group">
-                                <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
-                                <asp:TextBox runat="server" type="text" class="form-control" name="name" ID="name" required=""
-                                    placeholder="Adınızı Giriniz" /><asp:RequiredFieldValidator ControlToValidate="username" ForeColor="Red" ID="RequiredFieldValidator1" runat="server" ErrorMessage="Lütfen Adınızı ve Soyadınızı Giriniz."></asp:RequiredFieldValidator>
-                            </div>
-                        </div>
-                    </div>
-
-
                     <div class="form-group">
                         <span class="input-group-addon"><i class="fas fa-female"></i>  <i class="fas fa-male"></i></span>
                         <label for="">Cinsiyet: </label>
@@ -50,8 +37,8 @@
                         <div class="cols-sm-10">
                             <div class="input-group">
                                 <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
-                                <asp:TextBox runat="server" type="text" class="form-control" name="username" id="username" required=""
-                                    placeholder="Kullanıcı Adı" /><asp:RequiredFieldValidator ControlToValidate="username" ForeColor="Red" ID="RequiredFieldValidator2" runat="server" ErrorMessage="Kullanıcı adı boş olamaz."></asp:RequiredFieldValidator>
+                                <asp:TextBox runat="server" type="text" class="form-control" name="username" id="username" 
+                                    placeholder="Kullanıcı Adı" /><asp:RequiredFieldValidator ControlToValidate="username" ForeColor="Black" ID="RequiredFieldValidator2" runat="server" ErrorMessage="Kullanıcı adı boş olamaz."></asp:RequiredFieldValidator>
                             </div>
                         </div>
                     </div>
@@ -62,8 +49,8 @@
                             <div class="input-group">
                                 <span class="input-group-addon"><i class="fa fa-lock fa-lg"
                                     aria-hidden="true"></i></span>
-                                <asp:TextBox runat="server" type="password" class="form-control" name="password" id="password" required=""
-                                    placeholder="Şifre:" /><asp:RequiredFieldValidator ControlToValidate="username" ForeColor="Red" ID="RequiredFieldValidator3" runat="server" ErrorMessage="Şifre boş olamaz."></asp:RequiredFieldValidator>
+                                <asp:TextBox runat="server" type="password" class="form-control" name="password" id="password" 
+                                    placeholder="Şifre:" /><asp:RequiredFieldValidator ControlToValidate="username" ForeColor="Black" ID="RequiredFieldValidator3" runat="server" ErrorMessage="Şifre boş olamaz."></asp:RequiredFieldValidator>
                             </div>
                         </div>
                     </div>
@@ -74,8 +61,8 @@
                             <div class="input-group">
                                 <span class="input-group-addon"><i class="fa fa-lock fa-lg"
                                     aria-hidden="true"></i></span>
-                                <asp:TextBox runat="server" type="password" class="form-control" name="confirm" id="confirm" required=""
-                                    placeholder="Şifre Tekrar" /><asp:RequiredFieldValidator ControlToValidate="username" ForeColor="Red" ID="RequiredFieldValidator4" runat="server" ErrorMessage="Şifre tekrarı boş olamaz."></asp:RequiredFieldValidator>
+                                <asp:TextBox runat="server" type="password" class="form-control" name="confirm" id="confirm" 
+                                    placeholder="Şifre Tekrar" /><asp:RequiredFieldValidator ControlToValidate="username" ForeColor="Black" ID="RequiredFieldValidator4" runat="server" ErrorMessage="Şifre tekrarı boş olamaz."></asp:RequiredFieldValidator>
                             </div>
                         </div>
                     </div>
