@@ -16,7 +16,17 @@ namespace _2017222041_hasanakpolad
 
         protected void btnSubmit_Click(object sender, EventArgs e)
         {
+            using (var db = new MasterContext())
+            {
+                var user = db.Users.Where(x => x.UserName.Contains(username.Text) && x.Password.Contains(password.Text));
+                if(user!=null)
+                    Response.Redirect("HomePage.aspx");
+                else
+                {
+                    Response.Write("<script>alert('Kullanıcı Adı veya şifre hatalı!')</script>");
+                }
 
+            }
         }
     }
 }

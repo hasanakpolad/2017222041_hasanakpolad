@@ -23,13 +23,12 @@
                 <h5>Bilgileri Eksiksiz Doldurunuz.</h5>
                 <form runat="server" class="" method="post" action="#">
                     <div class="form-group">
-                        <span class="input-group-addon"><i class="fas fa-female"></i>  <i class="fas fa-male"></i></span>
+                        <span class="input-group-addon"><i class="fas fa-female"></i><i class="fas fa-male"></i></span>
                         <label for="">Cinsiyet: </label>
-                        <br>
-                        <input type="radio" id="erkek">
-                        <label for="flexRadioDefault1">Erkek</label>
-                        <input type="radio" id="kadın">
-                        <label for="flexRadioDefault1">Kadın</label>
+                        <asp:RadioButtonList runat="server" ID="gender">
+                            <asp:ListItem Text="Erkek" />
+                            <asp:ListItem Text="Kadın" />
+                        </asp:RadioButtonList>
                     </div>
 
                     <div class="form-group">
@@ -37,7 +36,7 @@
                         <div class="cols-sm-10">
                             <div class="input-group">
                                 <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
-                                <asp:TextBox runat="server" type="text" class="form-control" name="username" id="username" 
+                                <asp:TextBox runat="server" type="text" class="form-control" name="username" ID="username"
                                     placeholder="Kullanıcı Adı" /><asp:RequiredFieldValidator ControlToValidate="username" ForeColor="Black" ID="RequiredFieldValidator2" runat="server" ErrorMessage="Kullanıcı adı boş olamaz."></asp:RequiredFieldValidator>
                             </div>
                         </div>
@@ -49,8 +48,8 @@
                             <div class="input-group">
                                 <span class="input-group-addon"><i class="fa fa-lock fa-lg"
                                     aria-hidden="true"></i></span>
-                                <asp:TextBox runat="server" type="password" class="form-control" name="password" id="password" 
-                                    placeholder="Şifre:" /><asp:RequiredFieldValidator ControlToValidate="username" ForeColor="Black" ID="RequiredFieldValidator3" runat="server" ErrorMessage="Şifre boş olamaz."></asp:RequiredFieldValidator>
+                                <asp:TextBox runat="server" type="password" class="form-control" name="password" ID="password"
+                                    placeholder="Şifre:" /><asp:RequiredFieldValidator ControlToValidate="password" ForeColor="Black" ID="RequiredFieldValidator3" runat="server" ErrorMessage="Şifre boş olamaz."></asp:RequiredFieldValidator>
                             </div>
                         </div>
                     </div>
@@ -61,14 +60,14 @@
                             <div class="input-group">
                                 <span class="input-group-addon"><i class="fa fa-lock fa-lg"
                                     aria-hidden="true"></i></span>
-                                <asp:TextBox runat="server" type="password" class="form-control" name="confirm" id="confirm" 
-                                    placeholder="Şifre Tekrar" /><asp:RequiredFieldValidator ControlToValidate="username" ForeColor="Black" ID="RequiredFieldValidator4" runat="server" ErrorMessage="Şifre tekrarı boş olamaz."></asp:RequiredFieldValidator>
+                                <asp:TextBox runat="server" type="password" class="form-control" name="confirm" ID="confirm"
+                                    placeholder="Şifre Tekrar" /><asp:RequiredFieldValidator ControlToValidate="confirm" ForeColor="Black" ID="RequiredFieldValidator4" runat="server" ErrorMessage="Şifre tekrarı boş olamaz."></asp:RequiredFieldValidator>
                             </div>
                         </div>
                     </div>
 
                     <div class="form-group ">
-                        <asp:Button runat="server" ID="btnKyt" class="btn btn-primary btn-lg btn-block login-button" Text="Kaydol"></asp:Button>
+                        <asp:Button runat="server" ID="btnKyt" class="btn btn-primary btn-lg btn-block login-button" Text="Kaydol" OnClick="btnKyt_Click"></asp:Button>
                     </div>
 
                 </form>

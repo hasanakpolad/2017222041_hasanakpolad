@@ -29,15 +29,15 @@
                             </div>
                             <div class="form-group">
                                 <asp:Label runat="server" for="password" class="text-info">Şifre :</asp:Label><br>
-                                <asp:TextBox runat="server"  name="password" ID="password" class="form-control"></asp:TextBox><asp:RequiredFieldValidator ControlToValidate="password" ForeColor="Red" ID="RequiredFieldValidator2" runat="server" ErrorMessage="Şifre boş olamaz."></asp:RequiredFieldValidator>
+                                <asp:TextBox runat="server" TextMode="Password" name="password" ID="password" class="form-control"></asp:TextBox><asp:RequiredFieldValidator ControlToValidate="password" ForeColor="Red" ID="RequiredFieldValidator2" runat="server" ErrorMessage="Şifre boş olamaz."></asp:RequiredFieldValidator>
                                 &nbsp;
                             </div>
                             <div class="form-group">
                                 <label for="remember-me" class="text-info">
                                     <span>Beni Hatırla</span> <span>
                                         <input id="remember-me" name="remember-me" type="checkbox"></span></label><br>
-                                <asp:Button runat="server" type="submit" name="submit" class="btn btn-info btn-md" ID="btnSubmit" Text="Gönder" OnClick="btnSubmit_Click"></asp:Button>                            
-                                <asp:LinkButton runat="server" href="./SignUp.aspx" class="text-info kayitol" Text="Kayıt Ol"></asp:LinkButton> 
+                                <asp:Button runat="server" type="submit" name="submit" class="btn btn-info btn-md" ID="btnSubmit" Text="Gönder" OnClick="btnSubmit_Click"></asp:Button>
+                                <asp:LinkButton runat="server" href="./SignUp.aspx" class="text-info kayitol" Text="Kayıt Ol"></asp:LinkButton>
                             </div>
                         </form>
                     </div>

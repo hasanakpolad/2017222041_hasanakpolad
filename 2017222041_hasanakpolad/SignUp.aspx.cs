@@ -13,5 +13,23 @@ namespace _2017222041_hasanakpolad
         {
 
         }
+
+        protected void btnKyt_Click(object sender, EventArgs e)
+        {
+            using (var db = new MasterContext())
+            {
+                var user = new Users()
+                {
+                    UserName = username.Text,
+                    Password = password.Text,
+                    PasswordConfirm = confirm.Text,
+                    Gender = gender.SelectedValue
+                };
+                db.Users.Add(user);
+
+                if (db.SaveChanges() > 0)
+                    Response.Redirect("SignIn.aspx");
+            }
+        }
     }
 }
