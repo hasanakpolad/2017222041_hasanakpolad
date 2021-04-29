@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -18,9 +20,15 @@ namespace _2017222041_hasanakpolad
         {
             using (var db = new MasterContext())
             {
-                var user = db.Users.Where(x => x.UserName.Contains(username.Text) && x.Password.Contains(password.Text));
-                if(user!=null)
+                // var user = db.Users.Where(x => x.UserName.Contains(username.Text) && x.Password.Contains(password.Text));
+                var users = db.Users.Select(x => x.UserName);
+                var pass = db.Users.Select(x => x.Password);
+                if (users.Contains(username.Text) && pass.Contains(password.Text))
+                {
+                    Session.Add("user", username.Text);
+                    Session.Timeout = 5000;
                     Response.Redirect("HomePage.aspx");
+                }
                 else
                 {
                     Response.Write("<script>alert('Kullanıcı Adı veya şifre hatalı!')</script>");

@@ -11,7 +11,7 @@ namespace _2017222041_hasanakpolad
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            Response.Write("<script>alert('Hoşgeldiniz"+ Session["user"]+"')</script> " + "");
         }
     }
 }

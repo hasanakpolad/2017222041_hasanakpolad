@@ -36,8 +36,8 @@
                                 <label for="remember-me" class="text-info">
                                     <span>Beni Hatırla</span> <span>
                                         <input id="remember-me" name="remember-me" type="checkbox"></span></label><br>
-                                <asp:Button runat="server" type="submit" name="submit" class="btn btn-info btn-md" ID="btnSubmit" Text="Gönder" OnClick="btnSubmit_Click"></asp:Button>
-                                <asp:LinkButton runat="server" href="./SignUp.aspx" class="text-info kayitol" Text="Kayıt Ol"></asp:LinkButton>
+                                <asp:Button runat="server" type="submit" name="submit" class="btn btn-info btn-md" ID="btnSubmit" Text="Gönder" OnClick="btnSubmit_Click"></asp:Button>                            
+                                <asp:LinkButton runat="server" href="./SignUp.aspx" class="text-info kayitol" Text="Kayıt Ol"></asp:LinkButton> 
                             </div>
                         </form>
                     </div>
@@ -45,6 +45,8 @@
             </div>
         </div>
     </div>
+
+    <asp:SqlDataSource ID="SqlDataSource1" DataSourceMode="DataReader" runat="server" ConnectionString="<%$ ConnectionStrings:User %>" SelectCommand="SELECT [UserName], [Password] FROM [Users]"></asp:SqlDataSource>
 
 </body>
 </html>
